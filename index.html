@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #004d40; /* Jungle Green */
+            color: #fff;
+            padding: 1em 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #ffd700; /* Gold */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 2em;
+            text-align: center;
+        }
+
+        h1 {
+            color: #004d40;
+        }
+
+        footer {
+            background-color: #004d40;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .home-intro, .about-me, .my-projects {
+            background-color: #e0f2f1; /* Light Jungle Green */
+            padding: 2em;
+            border-radius: 10px;
+            margin: 2em auto;
+            width: 80%;
+        }
+
+        .about-me img {
+           border-radius: 20%;
+           width: 50px;
+          height: 50px;
+          object-fit: cover;
+         margin-bottom: 1em;
+        }
+        .project {
+            background-color: #fff;
+            padding: 1em;
+            border-radius: 10px;
+            margin: 1em auto;
+            border: 1px solid #004d40;
+            width: 80%;
+        }
+
+        .project a {
+            color: #004d40;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content {
+            display: none;
+        }
+
+        .content.active {
+            display: block;
+        }
+    </style>
+    <script>
+        function showPage(pageId) {
+            var pages = document.querySelectorAll('.content');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showPage('home')">Home</a></li>
+                <li><a href="#" onclick="showPage('about')">About</a></li>
+                <li><a href="#" onclick="showPage('projects')">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="content active">
+            <div class="home-intro">
+                <h1>Welcome to My Portfolio</h1>
+                <img src="profile.jpeg">
+                <h2> Emmanuellar Sidi Karisa</h2>
+                <p>Explore my projects and get to know more about me.</p>
+            </div>
+        </section>
+        <section id="about" class="content">
+            <div class="about-me">
+                <h1>About Me</h1>
+                <p>I am a dedicated Data Science enthusiast with a foundation in Actuarial Science. Proficient in transforming data into
+                    actionable insights for effective decision-making. Eager to contribute expertise in data analytics, project
+                    management, drive program excellence, and troubleshoot challenges for organizational success.</p>
+                <a href="https://www.linkedin.com/in/emmanuellar-sidi-bb8391bb/">LinkedIn</a>
+            </div>
+        </section>
+        <section id="projects" class="content">
+            <div class="my-projects">
+                <h1>My Projects</h1>
+                <p>A look into my projects</p>
+                <!-- Example of a project -->
+                <div class="project">
+                    <h2>House Price Prediction</h2>
+                    <p>The primary goal of the project is to build a predictive model that can estimate/predict the house prices in King County, Washington, USA based on its features, provide valuable insights through comparative market analysis to facilitate informed decision making. The target audience includes real estate analysts, real estate investors, data scientists, machine learning practioners,financial institutions, potential home buyers and potential tenants. Business and Data Understanding</p>
+                    <a href="https://github.com/EllahSidi/Kingcounty">Project Link</a>
+                </div>
+                <div class="project">
+                    <h2>Forecastic Customer Churn</h2>
+                    <p>SyriaTel is a telecommunication company which provides state of the art communication services. However, it is grappling with a challenge of customers churning. The business is facing revenue losses as a result of customers terminating their subscription. The primary goal of this project is to analyse the factors fueling customer churn and build a predictive model to identify patterns and indicators of the customers likely to churn soon. The target stakeholders are executives, product managers, marketing teams, finance and account teams, and contact centre team at Syria Tel. </p>
+                    <a href="https://github.com/EllahSidi/predicting_cutomer_churn">Project Link</a>
+                </div>
+                <div class ="project">
+                    <h2> Predicting Stock Prices</h2>
+                    <p>The stock market landscape in Kenya has undergone significant expansion in recent times, driven by factors such as improved internet connectivity and a growing inclination towards personalized investment experiences. As investors increasingly seek tailored financial insights, companies like StockTech is confronted with the imperative of elevating user engagement to stay competitive.</p>
+                    <a href="https://github.com/Rgmoogachiri/captsone_project">Project Link</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024| Emmanuellar Karisa| All Rights Reserved</p>
+    </footer>
+</body>
+</html>
